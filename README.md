@@ -12,10 +12,25 @@ This is an offline Tic Tac Toe game app developed with Java and Android Studio. 
 Tic Tac Toe Offline Game App
 
 # Installation
-To install the app, simply download it from the Google Play Store using the link provided above.
+You can download and install the Tic Tac Toe app on your Android device by following these simple steps:
+
+1. Clone the repository: [git clone:](https://github.com/NattyXO/Tic-Tac-Toe-Offline-Game-For-ALX)
+2. Open the project in Android Studio
+3. Connect your Android device to your computer
+4. Build and run the application on your device
+5. Enjoy playing the game!
 
 # Usage
-Once the app is installed, open it on your device and you will be taken to the game screen. The game is designed for two players and each player takes turns to place their mark (X or O) on the 3x3 board until one of the players wins or the game is a tie. The winner is the first player to get three of their marks in a row either horizontally, vertically, or diagonally.
+The game is very simple to use. Once you have installed the application on your Android device, simply open it and follow these steps:
+
+1. Select "New Game"
+2. Enter the names of the two players
+3. Player 1 will start the game with the X marker
+4. Players take turns placing their markers on the board
+5. The first player to get three in a row wins!
+6. If no player gets three in a row and the board is filled up, the game ends in a draw
+\
+The application also includes a win dialog that appears when a player wins. This dialog displays a message congratulating the winning player and provides an option to start a new game.
 
 # Contributing
 This project is open for contributions. If you wish to contribute to the project, please fork the repository, make your changes and create a pull request.
@@ -30,6 +45,16 @@ The Tic Tac Toe Offline Game App is open source software licensed under the [MIT
 
 ![App Screenshot](https://i.ibb.co/jvnxqy0/msg388087194-161649.jpg)
 
+
 ![](https://i.ibb.co/kSDm2SN/msg388087194-161647.jpg)
 
 ![](https://i.ibb.co/s9sy4R7/msg388087194-161646.jpg)
+
+# Authors
+This project was created by:
+
+Natnael Bizuneh [Linkedln](https://github.com/NattyXO/Tic-Tac-Toe-Offline-Game-For-ALX)
+
+Biniyam Asefa
+
+Birra Haile
