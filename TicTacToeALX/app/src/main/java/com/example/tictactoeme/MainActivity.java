@@ -1,8 +1,9 @@
 package com.example.tictactoeme;
 
-// Build your portfolio project (Week 1): Making Progress
-// Project Title:- Tic Tac Toe Game
-
+// Name:- Natnael Bizuneh
+//        Biniyam Asefa
+//        Birra Haile
+//
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -184,7 +185,125 @@ public class MainActivity extends AppCompatActivity {
      * @param imageView           image box on which we are going to set cross or zero image according to player turn
      * @param selectedBoxPosition user selected box position to make this box non selectable again
      */
-  
+    private void performAction(ImageView imageView, int selectedBoxPosition) {
+
+        // acquire box position by player who's turn (either 1 or 2)
+        boxPositions[selectedBoxPosition] = playerTurn;
+
+        // Check if its Player One is turn then set cross image to ImageView else set zero to ImageView
+        if (playerTurn == 1) {
+            imageView.setImageResource(R.drawable.cross_icon);
+
+            // checkPlayerWin function will return true if Player One win
+            if (checkPlayerWin()) {
+
+                // show win dialog with a message along with winner name
+                final WinDialog winDialog = new WinDialog(MainActivity.this, player1Name.getText().toString() + " has won the game.");
+                winDialog.show();
+            } else if (totalSelectedBoxes == 9) { // over this game if there is no box left to be select
+
+                // show win dialog with 'draw' message
+                final WinDialog winDialog = new WinDialog(MainActivity.this, "It is a Draw!");
+                winDialog.show();
+
+            } else {
+
+                // set Player Two as next turn
+                changePlayerTurn(2);
+                totalSelectedBoxes++;
+            }
+
+        } else {
+            imageView.setImageResource(R.drawable.zero_icon);
+
+            // checkPlayerWin function will return true if Player Two win
+            if (checkPlayerWin()) {
+
+                // show win dialog with a message
+                final WinDialog winDialog = new WinDialog(MainActivity.this, player2Name.getText().toString() + " has won the game.");
+                winDialog.setCancelable(false);
+                winDialog.show();
+            } else if (totalSelectedBoxes == 9) { // over this game if there is no box left to be select
+
+                // show win dialog with 'draw' message
+                final WinDialog winDialog = new WinDialog(MainActivity.this, "It is a Draw!");
+                winDialog.setCancelable(false);
+                winDialog.show();
+
+            } else {
+                // set Player One as next turn
+                changePlayerTurn(1);
+                totalSelectedBoxes++;
+            }
+
+        }
+    }
+
+    /**
+     * @param currentPlayerTurn new player's turn either 1 or 2
+     */
+    private void changePlayerTurn(int currentPlayerTurn) {
+
+        // select other player.
+        playerTurn = currentPlayerTurn;
+
+        //Change Layout Design according to selected player
+        if (playerTurn == 1) {
+            player1Layout.setBackgroundResource(R.drawable.round_back_dark_blue_stroke20); // select Player One
+            player2Layout.setBackgroundResource(R.drawable.round_back_dark_blue20); // deSelect Player Two
+        } else {
+            player2Layout.setBackgroundResource(R.drawable.round_back_dark_blue_stroke20); // select Player Two
+            player1Layout.setBackgroundResource(R.drawable.round_back_dark_blue20); // deSelect Player One
+        }
+    }
+
+    /**
+     * @param boxPosition current selected box position
+     */
+    private boolean isBoxSelectable(int boxPosition) {
+        boolean response = false;
+
+        if (boxPositions[boxPosition] == 0) {
+            response = true;
+        }
+
+        return response;
+    }
+
+    private boolean checkPlayerWin() {
+
+        boolean response = false;
+        for (int i = 0; i < combinationsList.size(); i++) {
+
+            final int[] combination = combinationsList.get(i);
+
+            if (boxPositions[combination[0]] == playerTurn && boxPositions[combination[1]] == playerTurn && boxPositions[combination[2]] == playerTurn) {
+                response = true;
+            }
+        }
+        return response;
+    }
+
+    public void startMatchAgain() {
+
+        // reset all boxes positions which acquired by players in previous match
+        boxPositions = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+        // set Player One as first turn
+        playerTurn = 1;
+
+        totalSelectedBoxes = 1;
+
+        // set empty transparent image to Every Box
+        image1.setImageResource(R.drawable.transparent_back);
+        image2.setImageResource(R.drawable.transparent_back);
+        image3.setImageResource(R.drawable.transparent_back);
+        image4.setImageResource(R.drawable.transparent_back);
+        image5.setImageResource(R.drawable.transparent_back);
+        image6.setImageResource(R.drawable.transparent_back);
+        image7.setImageResource(R.drawable.transparent_back);
+        image8.setImageResource(R.drawable.transparent_back);
+        image9.setImageResource(R.drawable.transparent_back);
 
     }
-	
+}
