@@ -1,49 +1,35 @@
+# Tic Tac Toe Offline Game App
+## Introduction
+This is an offline Tic Tac Toe game app developed with Java and Android Studio. The app allows two players to play against each other on the same device. The game features a simple and intuitive user interface that is easy to navigate.
 
-# Tic Tac Toe Offline Game
+## 🔗 Links
+[![Link to deployed site:](https://img.shields.io/badge/APK-Tic%20Tac%20Toe%20Offlien%20Game-yellow)](https://docs.google.com/uc?export=download&id=1ODu3a5YQxQB0zOGgGRffNJNicQDjEW6n)
 
-Tic Tac Toe is a classic game that can be played offline between two players. The game is played on a 3x3 grid where players take turns marking a cell with their respective symbol (either 'X' or 'O'). The objective of the game is to get three of your symbols in a row (horizontally, vertically, or diagonally) before your opponent does.
+[![Final project blog article:](https://img.shields.io/badge/B-Blog-blue)](https://nattyxo2018.editorx.io/geeztech-tictactoe)
 
-## Installation
+[![LinkedIn:](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://twitter.com/)
 
-The Tic Tac Toe game app can be installed on Android devices with a minimum version of 6.0. To install the app, follow these steps:
+Tic Tac Toe Offline Game App
 
-    1. Download the APK file from GitHub releases.
-    2. Open the APK file on your Android device.
-    3. If prompted, allow installation from unknown sources in your device settings.
-    4. Follow the on-screen instructions to complete the installation.
-    
-## How to Play
+# Installation
+To install the app, simply download it from the Google Play Store using the link provided above.
 
-    1. Open the Tic Tac Toe app on your Android device.
-    2. Select "Play with Friend" to start a new game.
-    3. The first player will be prompted to choose their symbol ('X' or 'O').
-    4. Players take turns marking a cell on the 3x3 grid with their respective symbol.
-    5. The game ends when one player gets three of their symbols in a row or all cells are marked without a winner.
-    6. If there is a winner, the app will display a message declaring the winner and offer the option to play again.
+# Usage
+Once the app is installed, open it on your device and you will be taken to the game screen. The game is designed for two players and each player takes turns to place their mark (X or O) on the 3x3 board until one of the players wins or the game is a tie. The winner is the first player to get three of their marks in a row either horizontally, vertically, or diagonally.
 
+# Contributing
+This project is open for contributions. If you wish to contribute to the project, please fork the repository, make your changes and create a pull request.
 
-## User Stories
-
-    1. As a player, I want to be able to start a new game so that I can play against a friend.
-    2. As a player, I want to be able to choose my symbol (either 'X' or 'O') so that I can start playing the game.
-    3. As a player, I want to be able to mark a cell with my symbol so that I can play the game.
-    4. As a player, I want the game to end when one player gets three of their symbols in a row or all cells are marked without a winner so that I can know when the game is over.
-    5. As a player, I want to be able to play again after a game has ended so that I can continue playing the game.
-
-## Trello Board
-
-The Trello board for this project can be found here. It contains the list of tasks to be completed for this project, including those related to engineering, design, testing, and deployment.
-## Demo
-
-A demo of the Tic Tac Toe offline game app can be found here.
-## Authors
-
-Natnael Bizuneh - Backend Developer
-Author 2
-Author 3
+# Related Projects
+Tic Tac Toe Online Game App: An online Tic Tac Toe game app developed with React and Firebase.
+# Licensing
+The Tic Tac Toe Offline Game App is open source software licensed under the [MIT License.](https://opensource.org/license/mit/)
 
 
-## Support
+## Screenshots
 
-For support, email nattyxo2018@gmail.com or join our Slack channel.
+![App Screenshot](https://i.ibb.co/jvnxqy0/msg388087194-161649.jpg)
 
+![](https://i.ibb.co/kSDm2SN/msg388087194-161647.jpg)
+
+![](https://i.ibb.co/s9sy4R7/msg388087194-161646.jpg)
