@@ -270,19 +270,27 @@ public class MainActivity extends AppCompatActivity {
         return response;
     }
 
-    private boolean checkPlayerWin() {
+		// This method checks if the current player has won the game by looping through the list of all possible winning combinations.
+	private boolean checkPlayerWin() {
 
-        boolean response = false;
-        for (int i = 0; i < combinationsList.size(); i++) {
+	boolean response = false;
 
-            final int[] combination = combinationsList.get(i);
+	// Loop through each possible winning combination to check if the player has marked all three positions with their symbol.
+	for (int i = 0; i < combinationsList.size(); i++) {
+		
+		// Get the current winning combination.
+		final int[] combination = combinationsList.get(i);
 
-            if (boxPositions[combination[0]] == playerTurn && boxPositions[combination[1]] == playerTurn && boxPositions[combination[2]] == playerTurn) {
-                response = true;
-            }
-        }
-        return response;
-    }
+		// Check if the player has marked all three positions in the current winning combination with their symbol.
+		if (boxPositions[combination[0]] == playerTurn && boxPositions[combination[1]] == playerTurn && boxPositions[combination[2]] == playerTurn) {
+			// If the player has marked all three positions in the current winning combination with their symbol, set the response to true.
+			response = true;
+		}
+	}
+
+	// Return the final response to indicate if the player has won.
+	return response;
+	}
 
     public void startMatchAgain() {
 
